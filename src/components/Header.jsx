@@ -15,19 +15,11 @@ const Header = () => {
 
   return (
     <Stack>
-      <Circle
-        position="absolute"
-        bg="blue.100"
-        opacity="0.1"
-        w="300px"
-        h="300px"
-        alignSelf="flex-end"
-      />
       <Flex
         direction={isLargerThan600 ? "row" : "column"}
         spacing="200px"
         p={isLargerThan600 ? "32" : "0"}
-        alignSelf="flex-start"
+        alignSelf="center"
       >
         <Box mt={isLargerThan600 ? "0" : "16"}>
           <Text fontSize="4xl" fontWeight="semibold">
@@ -45,7 +37,7 @@ const Header = () => {
             Download CV
           </Button>
         </Box>
-        <Image src="./images/avatar.png" />
+        <Image src="/avatar.png" />
       </Flex>
     </Stack>
   );

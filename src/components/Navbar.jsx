@@ -20,9 +20,6 @@ const Navbar = () => {
   return (
     <VStack p="5">
       <Flex w="100%">
-        <Heading ml="8" size="lg" fontWeight="semibold" color="cyan.400">
-          Shoaib Iqbal
-        </Heading>
         <Spacer />
         <IconButton ml="3" icon={<FaGithub />} isRound="true" />
         <IconButton ml="3" icon={<FaLinkedin />} isRound="true" />

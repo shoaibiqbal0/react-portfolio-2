@@ -4,7 +4,7 @@ import React from "react";
 const About = () => {
   return (
     <VStack>
-      <Text fontSize="3xl" minW="400px" pt="5rem">
+      <Text fontSize="2xl" minW="400px" pt="5rem">
         Hi, I'm
       </Text>
       <Text
@@ -14,6 +14,9 @@ const About = () => {
         fontWeight="bold"
       >
         Shoaib Iqbal
+      </Text>
+      <Text fontSize="sm" color="gray.500">
+        A fullstack developer who creates beautiful and scalable applications.
       </Text>
     </VStack>
   );

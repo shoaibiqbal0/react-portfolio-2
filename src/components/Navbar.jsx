@@ -20,8 +20,8 @@ const Navbar = () => {
   const [display, setDisplay] = useState("none");
 
   const data = [
-    { name: "Home", link: "#" },
     { name: "About", link: "#" },
+    { name: "Projects", link: "#" },
     { name: "Contact", link: "#" },
   ];
 

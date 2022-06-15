@@ -33,9 +33,9 @@ const Navbar = () => {
     // Normal Navbar
     <Flex w="100%" p="5">
       <HStack display={isLargerThan600 ? null : "none"}>
-        {data.map((item) => {
+        {data.map((item, index) => {
           return (
-            <ButtonGroup variant="ghost" px="1">
+            <ButtonGroup key={index} variant="ghost" px="1">
               <Button>{item.name}</Button>
             </ButtonGroup>
           );
@@ -70,9 +70,9 @@ const Navbar = () => {
         </Flex>
         {/* Mobile menu items */}
         <Flex direction="column" align="center">
-          {data.map((item) => {
+          {data.map((item, index) => {
             return (
-              <Flex mt="10%">
+              <Flex key={index} mt="10%">
                 <ButtonGroup variant="ghost" px="1">
                   <Button p="10" fontSize="x-large">
                     {item.name}

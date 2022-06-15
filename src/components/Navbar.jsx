@@ -14,7 +14,6 @@ import { useMediaQuery } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
-  const [darkMode, setDardMode] = useState(true);
   const { colorMode, toggleColorMode } = useColorMode();
   const [isLargerThan600] = useMediaQuery("(min-width: 600px)");
   const [display, setDisplay] = useState("none");
@@ -24,11 +23,6 @@ const Navbar = () => {
     { name: "Projects", link: "#" },
     { name: "Contact", link: "#" },
   ];
-
-  const handleClick = () => {
-    toggleColorMode();
-    setDardMode(!darkMode);
-  };
   return (
     // Normal Navbar
     <Flex w="100%" p="5">
@@ -87,8 +81,8 @@ const Navbar = () => {
       {/* Color mode button icon */}
       <IconButton
         ml="5"
-        onClick={handleClick}
-        icon={darkMode ? <FaSun /> : <FaMoon />}
+        onClick={toggleColorMode}
+        icon={colorMode === "dark" ? <FaSun /> : <FaMoon />}
         isRound="true"
       ></IconButton>
     </Flex>

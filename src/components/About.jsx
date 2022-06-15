@@ -1,4 +1,4 @@
-import { Flex, Text, VStack } from "@chakra-ui/react";
+import { Text, VStack } from "@chakra-ui/react";
 import React from "react";
 
 const About = () => {
@@ -11,7 +11,7 @@ const About = () => {
         <Text
           w="100%"
           fontSize={["5xl", "7xl"]}
-          bgGradient="linear(to-r, blue.300, purple.300, pink.300)"
+          bgGradient="linear(to-r, blue.400, purple.400, pink.400)"
           bgClip="text"
           fontWeight="bold"
         >

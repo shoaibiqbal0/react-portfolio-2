@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <VStack h="70vh" w="100vw" justify="center">
+    <VStack h="80vh" w="100vw" justify="center">
       <VStack maxW={["300px", "500px"]}>
         <Text w="100%" fontSize={["1xl", "2xl"]}>
           Hi, I'm

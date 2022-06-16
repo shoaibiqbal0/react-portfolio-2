@@ -13,6 +13,21 @@ import Node from "../assets/node.png";
 import ReactImg from "../assets/react.png";
 import Tailwind from "../assets/tailwind.png";
 
+const skillImages = [
+  {
+    image: Css,
+    text: "CSS",
+  },
+  {
+    image: Javascript,
+    text: "JavaScript",
+  },
+  { image: Mongo, text: "Mongo" },
+  { image: Node, text: "Node" },
+  { image: ReactImg, text: "React" },
+  { image: Tailwind, text: "Tailwind" },
+];
+
 const Skills = () => {
   const cardBackground = useColorModeValue("gray.100", "gray.900");
 
@@ -29,55 +44,25 @@ const Skills = () => {
         >
           Skills
         </Text>
-        <SimpleGrid columns={[2, 2, 3]} spacing="5" w="100%">
-          <Center
-            p="5"
-            borderRadius="10"
-            bg={cardBackground}
-            _hover={{ transform: "scale(1.1)", transition: "transform 0.5s" }}
-          >
-            <Image w="60px" src={Css} />
-          </Center>
-          <Center
-            p="10"
-            borderRadius="10"
-            bg={cardBackground}
-            _hover={{ transform: "scale(1.1)", transition: "transform 0.5s" }}
-          >
-            <Image w="60px" src={Javascript} />
-          </Center>
-          <Center
-            p="10"
-            borderRadius="10"
-            bg={cardBackground}
-            _hover={{ transform: "scale(1.1)", transition: "transform 0.5s" }}
-          >
-            <Image w="60px" src={ReactImg} />
-          </Center>
-          <Center
-            p="10"
-            borderRadius="10"
-            bg={cardBackground}
-            _hover={{ transform: "scale(1.1)", transition: "transform 0.5s" }}
-          >
-            <Image w="60px" src={Node} />
-          </Center>
-          <Center
-            p="10"
-            borderRadius="10"
-            bg={cardBackground}
-            _hover={{ transform: "scale(1.1)", transition: "transform 0.5s" }}
-          >
-            <Image w="60px" src={Mongo} />
-          </Center>
-          <Center
-            p="10"
-            borderRadius="10"
-            bg={cardBackground}
-            _hover={{ transform: "scale(1.1)", transition: "transform 0.5s" }}
-          >
-            <Image w="60px" src={Tailwind} />
-          </Center>
+        <SimpleGrid columns={[2, 3, 3]} spacing="5" w="100%">
+          {skillImages.map((item, index) => {
+            return (
+              <VStack key={index}>
+                <Center
+                  p={["30", "10"]}
+                  borderRadius="10"
+                  bg={cardBackground}
+                  _hover={{
+                    transform: "scale(1.1)",
+                    transition: "transform 0.5s",
+                  }}
+                >
+                  <Image w="60px" src={item.image} />
+                </Center>
+                <Text>{item.text}</Text>
+              </VStack>
+            );
+          })}
         </SimpleGrid>
       </VStack>
     </VStack>

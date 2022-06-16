@@ -31,7 +31,7 @@ const Navbar = () => {
       <HStack display={isLargerThan600 ? null : "none"}>
         {data.map((item, index) => {
           return (
-            <Link to={item.link}>
+            <Link key={index} to={item.link}>
               <Button variant="ghost">{item.name}</Button>
             </Link>
           );

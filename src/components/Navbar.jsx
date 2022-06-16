@@ -9,7 +9,6 @@ import {
   ButtonGroup,
   useColorModeValue,
   Spacer,
-  Text,
 } from "@chakra-ui/react";
 import { useMediaQuery } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -34,16 +33,7 @@ const Navbar = () => {
         {data.map((item, index) => {
           return (
             <Link to={item.link}>
-              <Text
-                cursor="pointer"
-                _hover={{ color: "black" }}
-                fontSize="1.1rem"
-                mx="5"
-                display="inline-block"
-                p="1.5"
-              >
-                {item.name}
-              </Text>
+              <Button variant="ghost">{item.name}</Button>
             </Link>
           );
         })}
@@ -80,11 +70,16 @@ const Navbar = () => {
           {data.map((item, index) => {
             return (
               <Flex key={index} mt="10%">
-                <ButtonGroup variant="ghost" px="1">
-                  <Button p="10" fontSize="x-large">
+                <Link to={item.link}>
+                  <Button
+                    onClick={() => setDisplay("none")}
+                    variant="ghost"
+                    p="10"
+                    fontSize="x-large"
+                  >
                     {item.name}
                   </Button>
-                </ButtonGroup>
+                </Link>
               </Flex>
             );
           })}

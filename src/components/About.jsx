@@ -10,15 +10,18 @@ const About = () => {
   const [animatedName, setAnimatedName] = useState("");
   useEffect(() => {
     const fullName = name.slice(0, animatedName.length + 1);
+    // If name is already typed out just return out of the function
     if (fullName === animatedName) return;
+    // use setAnimatedName function every 150 milliseconds
     const timeout = setTimeout(() => {
       setAnimatedName(name.slice(0, animatedName.length + 1));
     }, 150);
+    // Clear the timeout
     return () => clearTimeout(timeout);
   }, [animatedName]);
 
   return (
-    <VStack h="80vh" w="100vw" justify="center">
+    <VStack h="90vh" w="100vw" justify="center" name="about">
       <VStack maxW={["300px", "500px"]}>
         <Text w="100%" fontSize={["1xl", "2xl"]}>
           Hi, I'm

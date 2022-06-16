@@ -9,29 +9,42 @@ import {
   ButtonGroup,
   useColorModeValue,
   Spacer,
+  Text,
 } from "@chakra-ui/react";
 import { useMediaQuery } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [isLargerThan600] = useMediaQuery("(min-width: 600px)");
   const [display, setDisplay] = useState("none");
+  const navbarColor = useColorModeValue("gray.200", "gray.700");
 
   const data = [
-    { name: "About", link: "#" },
-    { name: "Projects", link: "#" },
-    { name: "Contact", link: "#" },
+    { name: "About", link: "about" },
+    { name: "Skills", link: "skills" },
+    { name: "Projects", link: "projects" },
+    { name: "Contact", link: "contact" },
   ];
   return (
     // Normal Navbar
-    <Flex w="100%" p="5">
+    <Flex w="100%" p="5" position="fixed" bg={navbarColor}>
       <HStack display={isLargerThan600 ? null : "none"}>
         {data.map((item, index) => {
           return (
-            <ButtonGroup key={index} variant="ghost" px="1">
-              <Button>{item.name}</Button>
-            </ButtonGroup>
+            <Link to={item.link}>
+              <Text
+                cursor="pointer"
+                _hover={{ color: "black" }}
+                fontSize="1.1rem"
+                mx="5"
+                display="inline-block"
+                p="1.5"
+              >
+                {item.name}
+              </Text>
+            </Link>
           );
         })}
       </HStack>
@@ -47,7 +60,7 @@ const Navbar = () => {
       <Flex
         w="100vw"
         h="100vh"
-        bgColor={useColorModeValue("gray.50", "gray.800")}
+        bgColor={useColorModeValue("gray.500", "gray.800")}
         zIndex={20}
         pos="fixed"
         top="0"

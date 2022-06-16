@@ -29,7 +29,7 @@ const Skills = () => {
         >
           Skills
         </Text>
-        <SimpleGrid columns={[2, 2, 3]} spacing="10" w="100%">
+        <SimpleGrid columns={[2, 2, 3]} spacing="5" w="100%">
           <Center
             p="5"
             borderRadius="10"

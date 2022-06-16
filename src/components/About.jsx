@@ -2,7 +2,7 @@ import { HStack, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import "../styles/about.css";
+import "../styles/styles.css";
 
 const name = "Shoaib Iqbal";
 
@@ -21,7 +21,7 @@ const About = () => {
   }, [animatedName]);
 
   return (
-    <VStack h="90vh" w="100vw" justify="center" name="about">
+    <VStack h="100vh" w="100vw" justify="center" name="about">
       <VStack maxW={["300px", "500px"]}>
         <Text w="100%" fontSize={["1xl", "2xl"]}>
           Hi, I'm
@@ -39,6 +39,7 @@ const About = () => {
             color="pink.400"
             fontSize={["4xl", "7xl"]}
             className="text-animate"
+            zIndex="-1"
           />
         </HStack>
         <Text w="100%" fontSize="sm" color="gray.500">

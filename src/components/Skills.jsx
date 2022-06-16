@@ -19,33 +19,64 @@ const Skills = () => {
   return (
     <VStack h="100vh" w="100vw" justify="center" name="skills">
       <VStack minW={["300px", "500px"]} maxW={["300px", "500px"]}>
-        <Text w="100%" fontWeight="bold" fontSize={["4xl", "7xl"]} pb="50">
+        <Text
+          w="100%"
+          fontWeight="bold"
+          fontSize={["4xl", "7xl"]}
+          pb="50"
+          bgGradient="linear(to-r, blue.400, purple.400, pink.400)"
+          bgClip="text"
+        >
           Skills
         </Text>
         <SimpleGrid columns={[2, 2, 3]} spacing="10" w="100%">
           <Center
-            minH="150px"
-            minW="150px"
+            p="5"
             borderRadius="10"
             bg={cardBackground}
             _hover={{ transform: "scale(1.1)", transition: "transform 0.5s" }}
           >
-            <Image w="80px" src={Css} />
+            <Image w="60px" src={Css} />
           </Center>
-          <Center minH="150px" minW="150px" border="1px">
-            <Image w="80px" src={Javascript} />
+          <Center
+            p="10"
+            borderRadius="10"
+            bg={cardBackground}
+            _hover={{ transform: "scale(1.1)", transition: "transform 0.5s" }}
+          >
+            <Image w="60px" src={Javascript} />
           </Center>
-          <Center minH="150px" minW="150px" border="1px">
-            <Image w="80px" src={ReactImg} />
+          <Center
+            p="10"
+            borderRadius="10"
+            bg={cardBackground}
+            _hover={{ transform: "scale(1.1)", transition: "transform 0.5s" }}
+          >
+            <Image w="60px" src={ReactImg} />
           </Center>
-          <Center minH="150px" minW="150px" border="1px">
-            <Image w="80px" src={Node} />
+          <Center
+            p="10"
+            borderRadius="10"
+            bg={cardBackground}
+            _hover={{ transform: "scale(1.1)", transition: "transform 0.5s" }}
+          >
+            <Image w="60px" src={Node} />
           </Center>
-          <Center minH="150px" minW="150px" border="1px">
-            <Image w="80px" src={Mongo} />
+          <Center
+            p="10"
+            borderRadius="10"
+            bg={cardBackground}
+            _hover={{ transform: "scale(1.1)", transition: "transform 0.5s" }}
+          >
+            <Image w="60px" src={Mongo} />
           </Center>
-          <Center minH="150px" minW="150px" border="1px">
-            <Image w="80px" src={Tailwind} />
+          <Center
+            p="10"
+            borderRadius="10"
+            bg={cardBackground}
+            _hover={{ transform: "scale(1.1)", transition: "transform 0.5s" }}
+          >
+            <Image w="60px" src={Tailwind} />
           </Center>
         </SimpleGrid>
       </VStack>

@@ -19,8 +19,8 @@ const Navbar = () => {
   const [isLargerThan600] = useMediaQuery("(min-width: 600px)");
   const [display, setDisplay] = useState("none");
   const navbarColor = useColorModeValue(
-    "linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 100%);",
-    "linear-gradient(315deg, #485461 0%, #28313b 100%);"
+    "linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 100%)",
+    "linear-gradient(315deg, #485461 0%, #28313b 100%)"
   );
 
   const data = [
@@ -42,7 +42,15 @@ const Navbar = () => {
         {data.map((item, index) => {
           return (
             <Link key={index} to={item.link}>
-              <Button variant="ghost">{item.name}</Button>
+              <Button
+                _focus={{ outline: "none" }}
+                _focusVisible={{
+                  boxShadow: "0 0 0 3px rgba(66, 153, 255, 0.6)",
+                }}
+                variant="ghost"
+              >
+                {item.name}
+              </Button>
             </Link>
           );
         })}
@@ -50,6 +58,10 @@ const Navbar = () => {
       {/* Show Hamburger icon if window is less than 600px */}
       <HStack>
         <IconButton
+          _focus={{ outline: "none" }}
+          _focusVisible={{
+            boxShadow: "0 0 0 3px rgba(66, 153, 255, 0.6)",
+          }}
           icon={<GiHamburgerMenu />}
           display={isLargerThan600 ? "none" : null}
           onClick={() => setDisplay(null)}
@@ -59,7 +71,7 @@ const Navbar = () => {
       <Flex
         w="100vw"
         h="100vh"
-        bgColor={useColorModeValue("gray.500", "gray.800")}
+        bg={navbarColor}
         zIndex={20}
         pos="fixed"
         top="0"
@@ -71,6 +83,10 @@ const Navbar = () => {
         <Flex p="5" justify="flex-start">
           {/* Close menu icon */}
           <IconButton
+            _focus={{ outline: "none" }}
+            _focusVisible={{
+              boxShadow: "0 0 0 3px rgba(66, 153, 255, 0.6)",
+            }}
             icon={<FaTimes onClick={() => setDisplay("none")} />}
           ></IconButton>
         </Flex>
@@ -81,6 +97,10 @@ const Navbar = () => {
               <Flex key={index} mt="10%">
                 <Link to={item.link}>
                   <Button
+                    _focus={{ outline: "none" }}
+                    _focusVisible={{
+                      boxShadow: "0 0 0 3px rgba(66, 153, 255, 0.6)",
+                    }}
                     onClick={() => setDisplay("none")}
                     variant="ghost"
                     p="10"
@@ -97,6 +117,10 @@ const Navbar = () => {
       <Spacer />
       {/* Color mode button icon */}
       <IconButton
+        _focus={{ outline: "none" }}
+        _focusVisible={{
+          boxShadow: "0 0 0 3px rgba(66, 153, 255, 0.6)",
+        }}
         ml="5"
         onClick={toggleColorMode}
         icon={colorMode === "dark" ? <FaSun /> : <FaMoon />}

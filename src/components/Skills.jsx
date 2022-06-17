@@ -31,8 +31,8 @@ const skillImages = [
 
 const Skills = () => {
   const cardBackground = useColorModeValue(
-    "linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 100%);",
-    "linear-gradient(315deg, #485461 0%, #28313b 100%);"
+    "linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 100%)",
+    "linear-gradient(315deg, #485461 0%, #28313b 100%)"
   );
 
   return (

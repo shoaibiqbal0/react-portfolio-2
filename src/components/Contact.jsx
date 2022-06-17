@@ -1,8 +1,10 @@
 import {
-  Center,
-  Image,
-  SimpleGrid,
+  Button,
+  FormControl,
+  FormLabel,
+  Input,
   Text,
+  Textarea,
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
@@ -10,23 +12,10 @@ import React from "react";
 import "../styles/styles.css";
 
 const Contact = () => {
-  const cardBackground = useColorModeValue(
-    "linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 100%);",
-    "linear-gradient(315deg, #485461 0%, #28313b 100%);"
+  const buttonBackground = useColorModeValue(
+    "linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 100%)",
+    "linear-gradient(315deg, #485461 0%, #28313b 100%)"
   );
-
-  const projects = [
-    {
-      name: "React Todo List",
-      githubLink: "",
-      liveLink: "",
-    },
-    { name: "", githubLink: "", liveLink: "" },
-    { name: "React Todo List", githubLink: "", liveLink: "" },
-    { name: "React Todo List", githubLink: "", liveLink: "" },
-    { name: "React Todo List", githubLink: "", liveLink: "" },
-    { name: "React Todo List", githubLink: "", liveLink: "" },
-  ];
 
   return (
     <VStack h="100vh" w="100vw" justify="center" name="contact">
@@ -34,27 +23,50 @@ const Contact = () => {
         <Text w="100%" fontWeight="bold" fontSize={["3xl", "5xl"]} pb="50">
           &#91; Contact &#93;
         </Text>
-        <SimpleGrid columns={[2, 3, 3]} spacing="5" w="100%">
-          {projects.map((item, index) => {
-            return (
-              <VStack key={index}>
-                <Center
-                  boxShadow="0 3px 10px rgb(0 0 0 / 0.2)"
-                  bgGradient={cardBackground}
-                  p={["30", "10"]}
-                  borderRadius="10"
-                  _hover={{
-                    transform: "scale(1.1)",
-                    transition: "transform 0.5s",
-                  }}
-                >
-                  <Image color="gray.500" w="60px" src={item.image} />
-                </Center>
-                <Text>{item.text}</Text>
-              </VStack>
-            );
-          })}
-        </SimpleGrid>
+        <FormControl>
+          <FormLabel htmlFor="name">Name:</FormLabel>
+          <Input
+            id="name"
+            name="name"
+            type="text"
+            variant="filled"
+            isRequired
+          />
+          <FormLabel mt="5" htmlFor="email">
+            Email
+          </FormLabel>
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            variant="filled"
+            isRequired
+          />
+          <FormLabel mt="5" htmlFor="message">
+            Message
+          </FormLabel>
+          <Textarea
+            rows="10"
+            id="message"
+            name="message"
+            type="text"
+            variant="filled"
+            isRequired
+            resize="none"
+          />
+          <Button
+            float="right"
+            _focus={{ outline: "none" }}
+            colorScheme="messenger"
+            _focusVisible={{
+              boxShadow: "0 0 0 3px rgba(66, 153, 255, 0.6)",
+            }}
+            mt="5"
+            type="submit"
+          >
+            Submit
+          </Button>
+        </FormControl>
       </VStack>
     </VStack>
   );

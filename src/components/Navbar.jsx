@@ -12,6 +12,7 @@ import {
 import { useMediaQuery } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-scroll";
+import "../styles/styles.css";
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();

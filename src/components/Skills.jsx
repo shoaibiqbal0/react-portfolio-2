@@ -12,6 +12,7 @@ import Mongo from "../assets/mongo.png";
 import Node from "../assets/node.png";
 import ReactImg from "../assets/react.png";
 import Tailwind from "../assets/tailwind.png";
+import "../styles/styles.css";
 
 const skillImages = [
   {

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .text-animate:after {
   content: "_";
   animation: blink 1s step-start infinite;

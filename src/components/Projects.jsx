@@ -39,6 +39,7 @@ const Projects = () => {
             return (
               <VStack key={index}>
                 <Center
+                  boxShadow="0 3px 10px rgb(0 0 0 / 0.2)"
                   bgGradient={cardBackground}
                   p={["30", "10"]}
                   borderRadius="10"

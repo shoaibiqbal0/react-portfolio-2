@@ -18,7 +18,10 @@ const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [isLargerThan600] = useMediaQuery("(min-width: 600px)");
   const [display, setDisplay] = useState("none");
-  const navbarColor = useColorModeValue("gray.200", "gray.700");
+  const navbarColor = useColorModeValue(
+    "linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 100%);",
+    "linear-gradient(315deg, #485461 0%, #28313b 100%);"
+  );
 
   const data = [
     { name: "About", link: "about" },
@@ -28,7 +31,13 @@ const Navbar = () => {
   ];
   return (
     // Normal Navbar
-    <Flex w="100%" p="5" position="fixed" bg={navbarColor}>
+    <Flex
+      w="100%"
+      p="5"
+      position="fixed"
+      bg={navbarColor}
+      boxShadow="0 3px 10px rgb(0 0 0 / 0.2)"
+    >
       <HStack display={isLargerThan600 ? null : "none"}>
         {data.map((item, index) => {
           return (

@@ -23,7 +23,7 @@ const About = () => {
   return (
     <VStack h="100vh" w="100vw" justify="center" name="about">
       <VStack maxW={["300px", "500px"]}>
-        <Text w="100%" fontSize={["1xl", "2xl"]}>
+        <Text color="gray.500" w="100%" fontSize={["1xl", "2xl"]}>
           Hi, I'm
         </Text>
         <HStack w="100%">

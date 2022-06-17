@@ -5,18 +5,12 @@ import {
   Input,
   Text,
   Textarea,
-  useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import "../styles/styles.css";
 
 const Contact = () => {
-  const buttonBackground = useColorModeValue(
-    "linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 100%)",
-    "linear-gradient(315deg, #485461 0%, #28313b 100%)"
-  );
-
   return (
     <VStack h="100vh" w="100vw" justify="center" name="contact">
       <VStack minW={["300px", "500px"]} maxW={["300px", "500px"]}>

@@ -14,6 +14,7 @@ import emailjs from "emailjs-com";
 
 const Contact = () => {
   const toast = useToast();
+  const [buttonState, setButtonState] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -32,6 +33,7 @@ const Contact = () => {
 
   const sendEmail = (event) => {
     event.preventDefault();
+    setButtonState(true);
     emailjs
       .send(
         "service_3io629g",
@@ -55,6 +57,7 @@ const Contact = () => {
             duration: 6000,
             isClosable: true,
           });
+          setButtonState(false);
         },
         (error) => {
           console.log(error);
@@ -116,6 +119,7 @@ const Contact = () => {
             }}
             mt="5"
             type="submit"
+            isLoading={buttonState}
           >
             Submit
           </Button>

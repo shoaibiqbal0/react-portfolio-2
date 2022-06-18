@@ -32,6 +32,7 @@ const Navbar = () => {
   return (
     // Normal Navbar
     <Flex
+      zIndex={10}
       w="100%"
       p="5"
       position="fixed"

@@ -9,15 +9,18 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import "../styles/styles.css";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const sendEmail = () => {};
+
   return (
     <VStack h="100vh" w="100vw" justify="center" name="contact">
       <VStack minW={["300px", "500px"]} maxW={["300px", "500px"]}>
         <Text w="100%" fontWeight="bold" fontSize={["3xl", "5xl"]} pb="50">
           &#91; Contact &#93;
         </Text>
-        <FormControl>
+        <FormControl onSubmit={sendEmail}>
           <FormLabel htmlFor="name">Name:</FormLabel>
           <Input
             id="name"

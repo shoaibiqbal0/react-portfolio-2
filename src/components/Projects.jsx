@@ -35,7 +35,7 @@ const Projects = () => {
         <Text w="100%" fontWeight="bold" fontSize={["3xl", "5xl"]} pb="50">
           &#123; Projects &#125;
         </Text>
-        <SimpleGrid columns={[2, 2, 3]} spacing="5" w="100%">
+        <SimpleGrid columns={[1, 2, 3]} spacing="5" w="100%">
           {projects.map((item, index) => {
             return (
               <VStack key={index}>

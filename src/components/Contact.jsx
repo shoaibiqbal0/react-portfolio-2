@@ -66,9 +66,14 @@ const Contact = () => {
   };
 
   return (
-    <VStack h="100vh" w="100vw" justify="center" name="contact">
+    <VStack pt="10%" h="100vh" w="100vw" justify="center" name="contact">
       <VStack minW={["300px", "500px"]} maxW={["300px", "500px"]}>
-        <Text w="100%" fontWeight="bold" fontSize={["3xl", "5xl"]} pb="50">
+        <Text
+          w="100%"
+          fontWeight="bold"
+          fontSize={["3xl", "5xl"]}
+          pb={["50", "5", "5"]}
+        >
           &#91; Contact &#93;
         </Text>
 

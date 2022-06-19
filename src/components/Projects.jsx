@@ -49,8 +49,23 @@ const Projects = () => {
                     transition: "transform 0.5s",
                   }}
                 >
-                  <IconButton icon={<FaGithub />} />
-                  <Button mx="2">Live Demo</Button>
+                  <IconButton
+                    _focus={{ outline: "none" }}
+                    _focusVisible={{
+                      boxShadow: "0 0 0 3px rgba(66, 153, 255, 0.6)",
+                    }}
+                    icon={<FaGithub />}
+                  />
+                  <Button
+                    _focus={{ outline: "none" }}
+                    _focusVisible={{
+                      boxShadow: "0 0 0 3px rgba(66, 153, 255, 0.6)",
+                    }}
+                    colorScheme="linkedin"
+                    mx="2"
+                  >
+                    Live Demo
+                  </Button>
                 </Center>
                 <Text>{item.text}</Text>
               </VStack>

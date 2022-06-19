@@ -113,7 +113,7 @@ const Contact = () => {
             onClick={sendEmail}
             float="right"
             _focus={{ outline: "none" }}
-            colorScheme="messenger"
+            colorScheme="linkedin"
             _focusVisible={{
               boxShadow: "0 0 0 3px rgba(66, 153, 255, 0.6)",
             }}

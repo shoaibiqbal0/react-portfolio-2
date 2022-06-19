@@ -4,9 +4,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import "../styles/styles.css";
 
-const name = "Shoaib Iqbal";
-
 const About = () => {
+  const name = "Shoaib Iqbal";
   const [animatedName, setAnimatedName] = useState("");
   useEffect(() => {
     const fullName = name.slice(0, animatedName.length + 1);

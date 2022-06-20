@@ -10,6 +10,7 @@ const Footer = () => {
   return (
     <Flex
       w="100%"
+      mt="3rem"
       py="3"
       px="5"
       bg={footerColor}

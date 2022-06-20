@@ -20,7 +20,7 @@ const About = () => {
   }, [animatedName]);
 
   return (
-    <VStack h="100vh" w="100vw" justify="center" name="about">
+    <VStack minH="100vh" minW="100vw" justify="center" name="about">
       <VStack maxW={["300px", "500px"]}>
         <Text color="gray.500" w="100%" fontSize={["1xl", "2xl"]}>
           Hi, I'm

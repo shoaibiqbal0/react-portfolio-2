@@ -72,7 +72,7 @@ const Contact = () => {
   };
 
   return (
-    <VStack h="100vh" w="100vw" justify="center" name="contact">
+    <VStack minH="100vh" minW="100vw" justify="center" name="contact">
       <VStack
         minW={["300px", "500px", "800px"]}
         maxW={["300px", "500px", "800px"]}

@@ -53,12 +53,11 @@ const Projects = () => {
 
   return (
     <VStack
-      h="100vh"
-      w="100vw"
+      minH="100vh"
+      minW="100vw"
       justify="center"
-      pt={["55rem", 0, 0]}
       name="projects"
-      mb="50rem"
+      pt="7rem"
     >
       <VStack
         minW={["300px", "500px", "800px"]}

@@ -37,7 +37,7 @@ const Skills = () => {
   );
 
   return (
-    <VStack h="100vh" w="100vw" justify="center" name="skills" mb="10rem">
+    <VStack minH="100vh" minW="100vw" justify="center" name="skills">
       <VStack
         minW={["300px", "500px", "800px"]}
         maxW={["300px", "500px", "800px"]}

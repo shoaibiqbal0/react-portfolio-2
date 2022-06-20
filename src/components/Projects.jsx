@@ -1,8 +1,11 @@
 import {
   Button,
   Center,
+  HStack,
   IconButton,
   Image,
+  Link,
+  ScaleFade,
   SimpleGrid,
   Text,
   useColorModeValue,
@@ -11,6 +14,8 @@ import {
 import React from "react";
 import "../styles/styles.css";
 import { FaGithub } from "react-icons/fa";
+import Movies from "../assets/movies.png";
+import Weather from "../assets/weather.png";
 
 const Projects = () => {
   const cardBackground = useColorModeValue(
@@ -20,18 +25,20 @@ const Projects = () => {
 
   const projects = [
     {
-      name: "React Todo List",
-      githubLink: "",
-      liveLink: "",
+      name: "Weather App",
+      description:
+        "A weather application built with React using OpenWeather API. The background image changes based on the current weather of the city.",
+      githubLink: "https://github.com/shoaibiqbal0/react-weather-app",
+      liveLink: "https://shoaibiqbal0.github.io/react-weather-app/",
+      img: Weather,
     },
-    { name: "", githubLink: "", liveLink: "" },
-    { name: "React Todo List", githubLink: "", liveLink: "" },
-    { name: "React Todo List", githubLink: "", liveLink: "" },
+    { name: "", description: "", githubLink: "", liveLink: "", img: "" },
+    { name: "", description: "", githubLink: "", liveLink: "", img: "" },
   ];
 
   return (
     <VStack h="100vh" w="100vw" justify="center" name="projects">
-      <VStack minW={["300px", "500px"]} maxW={["300px", "500px"]}>
+      <VStack minW={["300px", "500px"]} maxW={["300px", "800px"]}>
         <Text w="100%" fontWeight="bold" fontSize={["3xl", "5xl"]} pb="50">
           &#123; Projects &#125;
         </Text>
@@ -39,35 +46,53 @@ const Projects = () => {
           {projects.map((item, index) => {
             return (
               <VStack key={index}>
-                <Center
-                  boxShadow="0 3px 10px rgb(0 0 0 / 0.2)"
-                  bgGradient={cardBackground}
-                  p={["15", "5"]}
-                  borderRadius="10"
-                  _hover={{
-                    transform: "scale(1.1)",
-                    transition: "transform 0.5s",
-                  }}
+                <ScaleFade
+                  initialScale={0.9}
+                  in={true}
+                  whileHover={{ scale: 1.05 }}
                 >
-                  <IconButton
-                    _focus={{ outline: "none" }}
-                    _focusVisible={{
-                      boxShadow: "0 0 0 3px rgba(66, 153, 255, 0.6)",
-                    }}
-                    icon={<FaGithub />}
-                  />
-                  <Button
-                    _focus={{ outline: "none" }}
-                    _focusVisible={{
-                      boxShadow: "0 0 0 3px rgba(66, 153, 255, 0.6)",
-                    }}
-                    colorScheme="linkedin"
-                    mx="2"
+                  <Center
+                    boxShadow="0 3px 10px rgb(0 0 0 / 0.2)"
+                    bgGradient={cardBackground}
+                    p={["7.5", "2.5"]}
+                    borderRadius="10"
                   >
-                    Live Demo
-                  </Button>
-                </Center>
-                <Text>{item.text}</Text>
+                    <VStack>
+                      <Text fontWeight="bold">{item.name}</Text>
+                      <Image src={item.img} />
+                      <Text p="2" fontSize="sm">
+                        {item.description}
+                      </Text>
+                      <HStack>
+                        <Link href={item.githubLink} isExternal>
+                          <IconButton
+                            _focus={{ outline: "none" }}
+                            _focusVisible={{
+                              boxShadow: "0 0 0 3px rgba(66, 153, 255, 0.6)",
+                            }}
+                            icon={<FaGithub />}
+                          />
+                        </Link>
+                        <Link
+                          href={item.liveLink}
+                          isExternal
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Button
+                            _focus={{ outline: "none" }}
+                            _focusVisible={{
+                              boxShadow: "0 0 0 3px rgba(66, 153, 255, 0.6)",
+                            }}
+                            colorScheme="linkedin"
+                            mx="2"
+                          >
+                            Live Demo
+                          </Button>
+                        </Link>
+                      </HStack>
+                    </VStack>
+                  </Center>
+                </ScaleFade>
               </VStack>
             );
           })}

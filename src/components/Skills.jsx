@@ -1,6 +1,7 @@
 import {
   Center,
   Image,
+  ScaleFade,
   SimpleGrid,
   Text,
   useColorModeValue,
@@ -45,18 +46,20 @@ const Skills = () => {
           {skillImages.map((item, index) => {
             return (
               <VStack key={index}>
-                <Center
-                  boxShadow="0 3px 10px rgb(0 0 0 / 0.2)"
-                  bgGradient={cardBackground}
-                  p={["30", "10"]}
-                  borderRadius="10"
-                  _hover={{
-                    transform: "scale(1.1)",
-                    transition: "transform 0.5s",
-                  }}
+                <ScaleFade
+                  initialScale={0.9}
+                  in={true}
+                  whileHover={{ scale: 1.05 }}
                 >
-                  <Image color="gray.500" w="60px" src={item.image} />
-                </Center>
+                  <Center
+                    boxShadow="0 3px 10px rgb(0 0 0 / 0.2)"
+                    bgGradient={cardBackground}
+                    p={["30", "10"]}
+                    borderRadius="10"
+                  >
+                    <Image color="gray.500" w="60px" src={item.image} />
+                  </Center>
+                </ScaleFade>
                 <Text>{item.text}</Text>
               </VStack>
             );

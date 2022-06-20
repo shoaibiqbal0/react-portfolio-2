@@ -34,7 +34,8 @@ const Navbar = () => {
     <Flex
       zIndex={10}
       w="100%"
-      p="5"
+      py="2"
+      px="5"
       position="fixed"
       bg={navbarColor}
       boxShadow="0 3px 10px rgb(0 0 0 / 0.2)"
@@ -81,7 +82,7 @@ const Navbar = () => {
         flexDir="column"
         display={display}
       >
-        <Flex p="5" justify="flex-start">
+        <Flex py="2" px="5" justify="flex-start">
           {/* Close menu icon */}
           <IconButton
             _focus={{ outline: "none" }}

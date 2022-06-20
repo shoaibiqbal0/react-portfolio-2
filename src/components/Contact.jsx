@@ -56,8 +56,14 @@ const Contact = () => {
             status: "success",
             duration: 6000,
             isClosable: true,
+            position: "top",
           });
           setButtonState(false);
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+          });
         },
         (error) => {
           console.log(error);

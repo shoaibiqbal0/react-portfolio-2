@@ -37,9 +37,12 @@ const Skills = () => {
   );
 
   return (
-    <VStack h="100vh" w="100vw" justify="center" name="skills">
-      <VStack minW={["300px", "500px"]} maxW={["300px", "500px"]}>
-        <Text w="100%" fontWeight="bold" fontSize={["3xl", "5xl"]} pb="50">
+    <VStack h="100vh" w="100vw" justify="center" name="skills" mb="10rem">
+      <VStack
+        minW={["300px", "500px", "800px"]}
+        maxW={["300px", "500px", "800px"]}
+      >
+        <Text w="100%" fontWeight="bold" fontSize={["2xl", "4xl"]} pb="50">
           &lt;Skills /&gt;
         </Text>
         <SimpleGrid columns={[2, 3, 3]} spacing="5" w="100%">

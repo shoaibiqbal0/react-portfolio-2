@@ -27,19 +27,42 @@ const Projects = () => {
     {
       name: "Weather App",
       description:
-        "A weather application built with React using OpenWeather API. The background image changes based on the current weather of the city.",
+        "A simple weather app built with React using OpenWeather API. The background image changes based on the current weather of the city.",
       githubLink: "https://github.com/shoaibiqbal0/react-weather-app",
       liveLink: "https://shoaibiqbal0.github.io/react-weather-app/",
       img: Weather,
     },
-    { name: "", description: "", githubLink: "", liveLink: "", img: "" },
+    {
+      name: "Movies Search App",
+      description:
+        "Responsive movies search built with React and OMDb API. Search a movie, click on the poster to see description and go to it's IMDb. There is a dark mode feature too.",
+      githubLink: "https://github.com/shoaibiqbal0/react-movie-app",
+      liveLink: "https://shoaibiqbal0.github.io/react-movie-app/",
+      img: Movies,
+    },
     { name: "", description: "", githubLink: "", liveLink: "", img: "" },
   ];
 
   return (
-    <VStack h="100vh" w="100vw" justify="center" name="projects">
-      <VStack minW={["300px", "500px"]} maxW={["300px", "800px"]}>
-        <Text w="100%" fontWeight="bold" fontSize={["3xl", "5xl"]} pb="50">
+    <VStack
+      h="100vh"
+      w="100vw"
+      justify="center"
+      pt={["35rem", 0, 0]}
+      name="projects"
+      mb="30rem"
+    >
+      <VStack
+        minW={["300px", "500px", "800px"]}
+        maxW={["300px", "500px", "800px"]}
+      >
+        <Text
+          w="100%"
+          fontWeight="bold"
+          fontSize={["2xl", "4xl"]}
+          pb="50"
+          className="projects"
+        >
           &#123; Projects &#125;
         </Text>
         <SimpleGrid columns={[1, 2, 3]} spacing="5" w="100%">

@@ -42,8 +42,15 @@ const Skills = () => {
         minW={["300px", "500px", "800px"]}
         maxW={["300px", "500px", "800px"]}
       >
-        <Text w="100%" fontWeight="bold" fontSize={["2xl", "4xl"]} pb="50">
-          &lt;Skills /&gt;
+        <Text
+          w="100%"
+          fontWeight="bold"
+          fontSize={["2xl", "3xl"]}
+          pb="50"
+          className="skills"
+          color="rgb(71, 151, 225)"
+        >
+          Skills
         </Text>
         <SimpleGrid columns={[2, 3, 3]} spacing="5" w="100%">
           {skillImages.map((item, index) => {

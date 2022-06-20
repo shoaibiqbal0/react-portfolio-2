@@ -74,10 +74,12 @@ const Contact = () => {
         <Text
           w="100%"
           fontWeight="bold"
-          fontSize={["2xl", "4xl"]}
+          fontSize={["2xl", "3xl"]}
           pb={["50", "5", "5"]}
+          className="contact"
+          color="rgb(233, 101, 169)"
         >
-          &#91; Contact &#93;
+          Contact
         </Text>
 
         <FormControl>

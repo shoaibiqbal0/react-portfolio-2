@@ -16,6 +16,7 @@ import "../styles/styles.css";
 import { FaGithub } from "react-icons/fa";
 import Movies from "../assets/movies.png";
 import Weather from "../assets/weather.png";
+import Portfolio from "../assets/portfolio.png";
 
 const Projects = () => {
   const cardBackground = useColorModeValue(
@@ -27,7 +28,7 @@ const Projects = () => {
     {
       name: "Weather App",
       description:
-        "A simple weather app built with React using OpenWeather API. The background image changes based on the current weather of the city.",
+        "A weather app built with React using OpenWeather API. The background image changes based on the current weather of the city.",
       githubLink: "https://github.com/shoaibiqbal0/react-weather-app",
       liveLink: "https://shoaibiqbal0.github.io/react-weather-app/",
       img: Weather,
@@ -35,12 +36,19 @@ const Projects = () => {
     {
       name: "Movies Search App",
       description:
-        "Responsive movies search built with React and OMDb API. Search a movie, click on the poster to see description and go to it's IMDb. There is a dark mode feature too.",
+        "Responsive movies search app with dark mode built with React and OMDb API. Search a movie, click on the poster and go to it's IMDb.",
       githubLink: "https://github.com/shoaibiqbal0/react-movie-app",
       liveLink: "https://shoaibiqbal0.github.io/react-movie-app/",
       img: Movies,
     },
-    { name: "", description: "", githubLink: "", liveLink: "", img: "" },
+    {
+      name: "Portfolio",
+      description:
+        "This portfolio was made with React using Chakra UI component library. It is fully responsive using a mix of Grid and Flexbox.",
+      githubLink: "https://github.com/shoaibiqbal0/react-portfolio-2",
+      liveLink: "https://shoaibiqbal0.github.io/react-portfolio-2",
+      img: Portfolio,
+    },
   ];
 
   return (
@@ -48,9 +56,9 @@ const Projects = () => {
       h="100vh"
       w="100vw"
       justify="center"
-      pt={["35rem", 0, 0]}
+      pt={["55rem", 0, 0]}
       name="projects"
-      mb="30rem"
+      mb="50rem"
     >
       <VStack
         minW={["300px", "500px", "800px"]}
@@ -59,11 +67,12 @@ const Projects = () => {
         <Text
           w="100%"
           fontWeight="bold"
-          fontSize={["2xl", "4xl"]}
+          fontSize={["2xl", "3xl"]}
           pb="50"
           className="projects"
+          color="rgb(144, 128, 233)"
         >
-          &#123; Projects &#125;
+          Projects
         </Text>
         <SimpleGrid columns={[1, 2, 3]} spacing="5" w="100%">
           {projects.map((item, index) => {

@@ -27,3 +27,33 @@ html {
 .btn:focus-visible {
   box-shadow: 0 0 0 3px rgba(66, 153, 255, 0.6);
 }
+
+.projects::before {
+  content: "{ ";
+  color: gainsboro;
+}
+
+.projects::after {
+  content: " }";
+  color: gainsboro;
+}
+
+.skills::before {
+  content: "< ";
+  color: gainsboro;
+}
+
+.skills::after {
+  content: " >";
+  color: gainsboro;
+}
+
+.contact::before {
+  content: "[ ";
+  color: gainsboro;
+}
+
+.contact::after {
+  content: " ]";
+  color: gainsboro;
+}

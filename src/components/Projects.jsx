@@ -58,7 +58,6 @@ const Projects = () => {
       justify="center"
       name="projects"
       pt="7rem"
-      mb="10rem"
     >
       <VStack
         minW={["300px", "500px", "800px"]}
